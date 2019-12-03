@@ -24,6 +24,7 @@ RUN apt-get purge -y \
     rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 VOLUME /data
+VOLUME /finished
 WORKDIR /data
 EXPOSE 29000
 COPY ["proxychains.conf", "/etc/proxychains.conf"]
