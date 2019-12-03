@@ -26,4 +26,5 @@ RUN apt-get purge -y \
 VOLUME /data
 WORKDIR /data
 EXPOSE 29000
+COPY ["proxychains.conf", "/etc/proxychains.conf"]
 CMD ["python", "/usr/local/bin/gs-server"]
