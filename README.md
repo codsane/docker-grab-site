@@ -36,8 +36,9 @@ services:
 docker-compose up -d
 ```
 
-### Grab A Site
+## Usage
+Because our gs-server resides inside the docker container, 
 ```
-docker-compose exec grabsite grab-site --my-grab-site-options https://example.com
+docker exec grab-site-container grab-site --my-grab-site-options https://example.com
 ```
 

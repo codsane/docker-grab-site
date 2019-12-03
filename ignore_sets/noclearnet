@@ -1,0 +1,15 @@
+# Modified from the noonion ignore_set: https://github.com/ArchiveTeam/grab-site/blob/master/libgrabsite/ignore_sets/noonion
+# Attempts to match only clearnet links
+# Example - https://regexr.com/4q28s
+#   Matches:
+#       https://www.torproject.org/about/trademark/
+#       https://torproject.org/
+#       http://www.torproject.org/
+#       https://support.torproject.org/
+#       https://onion.test.com
+#       https://www.torproject.org/about/jobs/
+#       https://www.torproject.org/press/
+#   Doesn't Match:
+#       http://expyuzz4wqqyqhjn.onion/sitemap.xml
+#       http://expyuzz4wqqyqhjn.onion
+^https?:\/\/[\w\-\.]+\.(?!onion)\/?.*
